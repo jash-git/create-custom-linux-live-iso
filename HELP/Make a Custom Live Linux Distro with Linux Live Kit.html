@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/amp4ads-host-v0.js.下載"></script><script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/osd.js.下載"></script><script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(7).txt"></script><script async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/apstag.js.下載"></script><script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(8).txt"></script><script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(9).txt" id="google_shimpl"></script><script async="" type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/gpt.js.下載"></script><script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/org"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://helpdeskgeek.com/wp-content/themes/hdg/images/favicon.ico">
+
+	<!--[if lt IE 8]><link rel="stylesheet" href="https://helpdeskgeek.com/wp-content/themes/hdg/css/ie.css" type="text/css" media="screen"/><![endif]-->
+
+	<link href="./Make a Custom Live Linux Distro with Linux Live Kit_files/css" rel="stylesheet">
+	<link href="./Make a Custom Live Linux Distro with Linux Live Kit_files/css(1)" rel="stylesheet">
+
+	<link rel="pingback" href="https://helpdeskgeek.com/xmlrpc.php">
+<script async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/analytics.js.下載"></script><script async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/v2bmwpTfU1OJs4r-fRu2T-bYrWe23LGvwqtnnmLqATun7LlFbjGsMop2JLZvtjvFp"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","id":"https:\/\/helpdeskgeek.com\/linux-tips\/make-a-custom-live-linux-distro-with-linux-live-kit\/"},"publisher":{"@type":"Organization","name":"Help Desk Geek","logo":{"@type":"ImageObject","url":"https:\/\/helpdeskgeek.com\/wp-content\/themes\/akic\/images\/favicon.ico","height":16,"width":16}},"headline":"Make a Custom Live Linux Distro with Linux Live Kit","name":"Make a Custom Live Linux Distro with Linux Live Kit","datePublished":"2019-05-23T05:08:48+00:00","dateModified":"2019-05-28T10:56:26+00:00","author":{"@type":"Person","name":"Aseem Kishore"},"description":"","image":{"@type":"ImageObject","url":"https:\/\/helpdeskgeek.com\/wp-content\/pictures\/2019\/03\/ubuntu.png","width":700,"height":300}}</script><title>Make a Custom Live Linux Distro with Linux Live Kit</title>
+
+	<script async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(10).txt"></script>
+<script type="text/javascript">!(function(o,n,t){t=o.createElement(n),o=o.getElementsByTagName(n)[0],t.async=1,t.src="https://dapperdiscussion.com/v2bmwpTfU1OJs4r-fRu2T-bYrWe23LGvwqtnnmLqATun7LlFbjGsMop2JLZvtjvFp",o.parentNode.insertBefore(t,o)})(document,"script"),(function(o,n){o[n]=o[n]||function(){(o[n].q=o[n].q||[]).push(arguments)}})(window,"admiral");!(function(c,e,o,t,n){function r(o,t){(function n(){try{return 0<(localStorage.getItem("v4ac1eiZr0")||"").split(",")[4]}catch(o){}return!1})()&&(t=c[e].pubads())&&t.setTargeting("admiral-engaged","true")}(n=c[e]=c[e]||{}).cmd=n.cmd||[],typeof n.pubads===o?r():typeof n.cmd.unshift===o?n.cmd.unshift(r):n.cmd.push(r)})(window,"googletag","function");</script><link rel="dns-prefetch" href="https://helpdeskgeek.com/">
+<link rel="dns-prefetch" href="https://snigelweb-com.videoplayerhub.com/">
+<link rel="dns-prefetch" href="https://cmp.tech426.com/">
+<link rel="dns-prefetch" href="https://netdna.bootstrapcdn.com/">
+<link rel="alternate" type="application/rss+xml" title="Help Desk Geek » Feed" href="https://helpdeskgeek.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Help Desk Geek » Comments Feed" href="https://helpdeskgeek.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Help Desk Geek » Make a Custom Live Linux Distro with Linux Live Kit Comments Feed" href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/feed/">
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-1429675-7';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-1429675-7', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<link rel="stylesheet" id="wp-block-library-css" href="./Make a Custom Live Linux Distro with Linux Live Kit_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="./Make a Custom Live Linux Distro with Linux Live Kit_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="akic-style-css" href="./Make a Custom Live Linux Distro with Linux Live Kit_files/style.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="hdgeek-style-css" href="./Make a Custom Live Linux Distro with Linux Live Kit_files/style.min(2).css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/helpdeskgeek.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/frontend.min.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/jquery.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/jquery-migrate.min.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/videoloader.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/sncmp_stub.min.js.下載"></script>
+<link rel="https://api.w.org/" href="https://helpdeskgeek.com/wp-json/">
+<link rel="prev" title="How to Open a Corrupted Word File and Recover Document" href="https://helpdeskgeek.com/windows-xp-tips/how-to-open-a-corrupted-word-file-and-recover-document/">
+<link rel="next" title="Automatically Backup Important Windows Folders with OneDrive" href="https://helpdeskgeek.com/how-to/automatically-backup-important-windows-folders-with-onedrive/">
+<link rel="canonical" href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/">
+<link rel="shortlink" href="https://helpdeskgeek.com/?p=33281">
+<link rel="alternate" type="application/json+oembed" href="https://helpdeskgeek.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhelpdeskgeek.com%2Flinux-tips%2Fmake-a-custom-live-linux-distro-with-linux-live-kit%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://helpdeskgeek.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhelpdeskgeek.com%2Flinux-tips%2Fmake-a-custom-live-linux-distro-with-linux-live-kit%2F&amp;format=xml">
+<meta property="og:title" name="og:title" content="Make a Custom Live Linux Distro with Linux Live Kit">
+<meta property="og:type" name="og:type" content="article">
+<meta property="og:image" name="og:image" content="https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin.png.webp">
+<meta property="og:url" name="og:url" content="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/">
+<meta property="og:description" name="og:description" content="Linux, it’s a word that makes many a non-geek’s eyes glaze over almost immediately. However, desktop Linux offerings are now pretty much on par with the big names such as [...]">
+<meta property="og:locale" name="og:locale" content="en_US">
+<meta property="og:site_name" name="og:site_name" content="Help Desk Geek">
+<meta property="twitter:card" name="twitter:card" content="summary_large_image">
+<meta property="twitter:creator" name="twitter:creator" content="@akishore">
+<meta property="article:section" name="article:section" content="Linux Tips">
+<meta property="article:published_time" name="article:published_time" content="2019-05-23T05:08:48-04:00">
+<meta property="article:modified_time" name="article:modified_time" content="2019-05-28T10:56:26-04:00">
+<meta property="article:author" name="article:author" content="https://helpdeskgeek.com/author/akishorehdg/">
+<link rel="amphtml" href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/amp/">
+	<script>
+	window.__cmp('setLogo', "//helpdeskgeek.com/wp-content/themes/hdg/images/favicon.ico", function(result){});
+	window.__cmp('setPrivacyPolicy', "//helpdeskgeek.com/privacy-policy", function(result){});
+	</script>
+	<script async="" type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/snhb-helpdeskgeek.com.min.js.下載"></script>
+
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+
+		adsbygoogle = window.adsbygoogle || [];
+		adsbygoogle.pauseAdRequests=1;
+
+		(function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+	</script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-8156617711959851",
+	    enable_page_level_ads: true
+	  });
+	</script>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link rel="preload" href="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(11).txt" as="script"><script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(11).txt"></script><link rel="preload" href="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(12).txt" as="script"><script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(12).txt"></script><script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/pubads_impl_2020050602.js.下載" async=""></script><script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(2)" async=""></script><script async="" type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/count.js.下載"></script><script type="text/javascript" async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/embed.js.下載"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/prebid.js.下載" async=""></script><script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/snhbGlobalSettings.js.下載" async=""></script><script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/sncmp.min.js.下載" async=""></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.db072b7d11b56c5c060394cab39e75c5.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.f9554506a08a1cc2b021f0dfc3f59ebb.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.d3858dbda732166bc46a5391f5b0b789.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><link rel="prefetch" href="https://434ff6df9cb025b99f222b90864e7c75.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body class="post-template-default single single-post postid-33281 single-format-standard linux-tips no-ie" dir="ltr" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+<div class="site-container">
+	<header id="header" class="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+		<div class="logo">
+			<a href="https://helpdeskgeek.com/" title="Help Desk Geek">
+				Help Desk Geek			</a>
+		</div>
+		<button class="search-toggle icon-search"><span class="screen-reader-text">Search</span></button>
+		<button class="menu-toggle icon-reorder"><span class="screen-reader-text">Menu</span></button>
+		<nav class="nav-primary"><ul id="menu-main-menu" class="menu menu-primary menu-wrap"><li id="menu-item-30133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30133"><a href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/#">Windows</a>
+<ul class="sub-menu">
+	<li id="menu-item-32296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32296"><a href="https://helpdeskgeek.com/category/windows-10/">Windows 10</a></li>
+	<li id="menu-item-30135" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30135"><a href="https://helpdeskgeek.com/category/windows-8/">Windows 8</a></li>
+	<li id="menu-item-30134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30134"><a href="https://helpdeskgeek.com/category/windows-7/">Windows 7</a></li>
+	<li id="menu-item-30136" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30136"><a href="https://helpdeskgeek.com/category/windows-vista-tips/">Windows Vista</a></li>
+	<li id="menu-item-30137" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30137"><a href="https://helpdeskgeek.com/category/windows-xp-tips/">Windows XP</a></li>
+</ul>
+</li>
+<li id="menu-item-30153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30153"><a href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/#">Reviews</a>
+<ul class="sub-menu">
+	<li id="menu-item-30139" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30139"><a href="https://helpdeskgeek.com/category/reviews/">Software</a></li>
+	<li id="menu-item-30141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30141"><a href="https://helpdeskgeek.com/category/free-tools-review/">Tools</a></li>
+	<li id="menu-item-30140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30140"><a href="https://helpdeskgeek.com/category/product-reviews/">Products</a></li>
+</ul>
+</li>
+<li id="menu-item-30142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30142"><a href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/#">Tips</a>
+<ul class="sub-menu">
+	<li id="menu-item-30144" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30144"><a href="https://helpdeskgeek.com/category/how-to/">How-To</a></li>
+	<li id="menu-item-30143" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30143"><a href="https://helpdeskgeek.com/category/help-desk/">Help Desk</a></li>
+	<li id="menu-item-30146" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30146"><a href="https://helpdeskgeek.com/category/office-tips/">MS Office</a></li>
+	<li id="menu-item-30145" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-30145"><a href="https://helpdeskgeek.com/category/linux-tips/">Linux</a></li>
+</ul>
+</li>
+<li id="menu-item-30147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30147"><a href="https://helpdeskgeek.com/linux-tips/make-a-custom-live-linux-distro-with-linux-live-kit/#">Other</a>
+<ul class="sub-menu">
+	<li id="menu-item-30148" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30148"><a href="https://helpdeskgeek.com/category/networking/">Networking</a></li>
+	<li id="menu-item-30149" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30149"><a href="https://helpdeskgeek.com/category/virtualization/">Virtualization</a></li>
+	<li id="menu-item-37669" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37669"><a href="https://helpdeskgeek.com/category/wordpress/">WordPress</a></li>
+	<li id="menu-item-37680" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37680"><a href="https://helpdeskgeek.com/category/featured-posts/">Featured Posts</a></li>
+</ul>
+</li>
+</ul></nav>		<div class="search-primary"><form class="search-form" method="get" id="cse-search-box" action="https://helpdeskgeek.com/" role="search"><input type="hidden" name="s" id="forcesearch"><input type="search" name="q" id="txtGoogleSearch" placeholder="Search this website" autocomplete="off" value=""></form></div>
+	</header>
+	<div class="entry-header">
+	<h1 class="entry-title" itemprop="headline">Make a Custom Live Linux Distro with Linux Live Kit</h1>
+
+	<div class="entry-content"><p>No degree in rocket science necessary</p>
+</div>  <div class="akic-authorheader">
+    <div class="avatar-img">
+      <img alt="Author avatar" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f7cb0b63500ae78f1a87456d4c3a59f5.jpeg" data-lazy-srcset="https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=96&amp;d=blank&amp;r=g 2x" class="avatar avatar-48 photo lazyloaded" height="48" width="48" data-lazy-src="https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=48&amp;d=blank&amp;r=g" srcset="https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=96&amp;d=blank&amp;r=g 2x" data-was-processed="true"><noscript><img alt='Author avatar' src='https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=48&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=96&#038;d=blank&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' /></noscript>    </div>
+    <div class="akic-byline">
+      <span class="akic-no-mobile-written-by">Written </span>by: <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="entry-author">
+        <a href="https://helpdeskgeek.com/author/akishorehdg/" itemprop="url"><span itemprop="name">Aseem Kishore</span></a>,       </span>
+            <span>Twitter: <a target="_blank" href="https://twitter.com/akishore">@akishore</a></span>      <br>
+      <span class="akic-no-mobile-posted-on">Posted on: </span><time class="entry-published updated" datetime="2019-05-23T05:08:48-04:00" itemprop="datePublished" title="Thursday, May 23, 2019, 5:08 am">May 23rd, 2019</time>
+      <span class="category">in: <a href="https://helpdeskgeek.com/category/linux-tips/" rel="category tag">Linux Tips</a></span>
+    </div>
+  </div>
+</div>
+	<div id="content-wrap" class="content-wrap wrap">
+
+<main id="content" class="content" role="main">
+
+			
+			<div id="post-33281" class="post-33281 post type-post status-publish format-standard has-post-thumbnail category-linux-tips linux-tips" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+				<div class="entry-content" itemprop="articleBody">
+					<div class="post-ad-top adsense-block" id="adsense-block-5" style="height: auto !important;">		<div class="adsense-block-wrap" style="width: 336px;">
+			<ins class="adsbygoogle adsense-block-5" style="display: block; height: 280px;" data-ad-client="ca-pub-8156617711959851" data-ad-slot="8605969107" data-ad-format="rectangle" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 336px; background-color: transparent; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:336px;height:280px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="336" height="280" frameborder="0" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CImOjMKtvOkCFdkJXAodyJQGjw" data-load-complete="true"></iframe></ins></ins></ins>
+		</div>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		</div>					<div class="KonaBody">
+<p>Linux, it’s a word that makes many a non-geek’s eyes glaze over almost immediately. However, desktop Linux offerings are now pretty much on par with the big names such as Windows and MacOS. </p>
+
+
+
+<p>Thanks to decades of community work and support from organizations like Canonical, you can download something like Ubuntu Linux today and do almost all the things you can with Windows. All without needing a degree in computer science. Modern desktop Linux distros look good, work well and are suitable for average users.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="./Make a Custom Live Linux Distro with Linux Live Kit_files/ubuntu.png.webp" alt="" class="wp-image-32778 lazyloaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu-300x169.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu-80x45.png.webp 80w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu.png.webp" sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu-300x169.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu-80x45.png.webp 80w" data-was-processed="true"><noscript><img src="https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu.png.webp" alt="" class="wp-image-32778" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu-300x169.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/03/ubuntu-80x45.png.webp 80w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+
+
+
+<p>However, they have one huge difference
+compared to commercial operating systems – Open Source licensing.</p>
+
+
+
+<p>This means we have full access to all the
+inner workings of Linux. You don’t have to pay to use it and you can customize
+it in just about any way you like. That’s great for power users who like to
+tinker with the nut and bolts, but what if you just want to preserve your own
+tweaked custom Linux installation?</p>
+
+
+
+<p>You can actually create a fresh install of Linux, set it up just the way you want it and then turn it into a live, bootable installation. This is super-useful for a few reasons. First of all, it means you won’t have any downtime if you have to reinstall your operating system. </p>
+
+
+
+<p>All your settings and software will already be waiting right from the start. It also makes it very easy to create custom installations for distribution. Let’s say you have to install Linux on a whole computer lab full of PCs and then install educational packages. Using a custom distribution tool means you only have to do that customization once and then simply install as usual.</p><!--<pre>In_content_1 all:[300x250]/dfp:[640x360]</pre>-->       
+<div id="snhb-In_content_1-0" class="adsense-block" data-google-query-id="CPb4ocOtvOkCFaHVfAodLhkBAw"><div id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_content_1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_content_1_0" title="3rd party ad content" name="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_content_1_0" width="405" height="338" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="4" data-load-complete="true" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(10).html"></iframe></div></div>
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('snhb-In_content_1-0'); });
+</script>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="./Make a Custom Live Linux Distro with Linux Live Kit_files/linux-penguin.png.webp" alt="" class="wp-image-33282 lazyloaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-300x165.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-610x336.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-80x44.png.webp 80w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin.png.webp" sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-300x165.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-610x336.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-80x44.png.webp 80w" data-was-processed="true"><noscript><img src="https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin.png.webp" alt="" class="wp-image-33282" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-300x165.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-610x336.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/linux-penguin-80x44.png.webp 80w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+
+
+
+<p>One of the easiest tools out there is called
+Linux Live Kit and we’re going to look at exactly how you can change an
+existing Linux installation back into a custom distro.</p>
+
+
+
+<h2>Setting Up The Machine</h2>
+
+
+
+<p>In order to use the Linux Live Kit, you need
+an installation of Linux to customize. While you can go ahead and do it with
+your main installation, it’s not the most practical approach if you want to
+create customized distributions for something other than your main computer.</p>
+
+
+
+<p>So what we’ll be doing is installing Ubuntu
+Linux to a VirtualBox virtual machine. That gives us a clean, controlled
+installation environment. It also means you can make custom Linux distros from
+a Windows machine if you like. Finally, it’s a good way to test the distro
+you’ve just created, to make sure it works properly. </p>
+
+
+
+<p>We are going to use the following components:</p>
+
+
+
+<ul><li>Windows 10</li><li>VirtualBox</li><li>Ubuntu 18&nbsp; LTS</li></ul>
+
+
+
+<p>Remember, the process works exactly the same
+if you use the Linux Live Kit on a Linux installation that running as normal on
+a computer, rather than in a virtual machine.</p>
+
+
+
+<h2>Installing Linux</h2>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="./Make a Custom Live Linux Distro with Linux Live Kit_files/Live-Kit-1.png.webp" alt="" class="wp-image-33283 lazyloaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-67x50.png.webp 67w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1.png.webp" sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-67x50.png.webp 67w" data-was-processed="true"><noscript><img src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1.png.webp" alt="" class="wp-image-33283" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-1-67x50.png.webp 67w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+
+
+
+<p>The first thing to do is install Linux.
+Obviously if you want to use an existing installation, you can skip this step. </p>
+
+
+
+<p>Installing Linux the usual way simply requires
+that you boot from the DVD or USB installation media. Because we’re using
+VirtualBox, we just have to create a new virtual machine and then point it
+towards the Ubuntu disc image we downloaded. Here are the steps you need to
+follow.</p>
+
+
+
+<h2>Taking Care of Dependencies</h2>
+
+
+
+<p>Since Linux Live Kit is just a clever
+collection of scripts, it needs certain other software packages to be present
+on your Linux machine. In many cases they will already be a default part of the
+version of Linux you have chosen, but you’ll have to verify this either way.</p>
+
+
+
+<p>You need to make sure that <em>aufs </em>is supported by the kernel used by your chosen Linux distribution. You can check which kernel versions supports aufs <a href="http://aufs.sourceforge.net/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">here</a>. If your chosen kernel does not support aufs, you’ll need to look at an alternative solution to Linux Live Kit.</p>
+
+
+
+<p>Now we need to make sure that Squashfs is
+installed on the system. This is the compression technology used by Linux Live
+Kit. To install it, here’s what to do.</p>
+
+
+
+<p>First, open the Terminal. In Ubuntu you can do this by clicking the<strong> “Show Application” </strong>button at the bottom left of the screen.<strong> </strong>This will bring up a search bar. Search for<strong> “Terminal” </strong>and click it when it comes up.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="./Make a Custom Live Linux Distro with Linux Live Kit_files/Live-Kit-2.png.webp" alt="" class="wp-image-33284 lazyloaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-67x50.png.webp 67w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2.png.webp" sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-67x50.png.webp 67w" data-was-processed="true"><noscript><img src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2.png.webp" alt="" class="wp-image-33284" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-2-67x50.png.webp 67w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+
+
+
+<p>Now, in the terminal, type the following:</p>
+
+
+
+<p><em>sudo
+apt-get update &amp;&amp; sudo apt-get install squashfs-tools</em></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="./Make a Custom Live Linux Distro with Linux Live Kit_files/Live-Kit-3.png.webp" alt="" class="wp-image-33285 lazyloaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-67x50.png.webp 67w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3.png.webp" sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-67x50.png.webp 67w" data-was-processed="true"><noscript><img src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3.png.webp" alt="" class="wp-image-33285" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-300x225.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-610x458.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-3-67x50.png.webp 67w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+
+
+
+<p>If all goes well the package will be
+installed. If you run into trouble, you’ll have to refer to your version of the
+OS documentation. Troubleshooting repository and installation issues are
+outside our scope for this tutorial.</p>
+
+
+
+<h2>Trimming the Fat</h2>
+
+
+
+<p>Since your live distro iw going to have all
+the same content as your installed one, you should remove any files you don’t
+need from your installation. You don’t have to do this and storage is cheap
+these days if you’re using a flash drive. If you don’t know what’s safe to remove,
+skip this part for now.</p>
+
+
+
+<h2>Customizing</h2>
+
+
+
+<p>Now you can go ahead and make the changes you
+want for your live distro. Install applications, tweak settings and so on. Once
+you are done with that, we can move on to the Live Kit itself.</p>
+
+
+
+<h2>Download Linux Live Kit</h2>
+
+
+
+<p>Now it’s time to download the scripts we need.
+You can find it on <a href="https://github.com/Tomas-M/linux-live">GitHub</a>. Pay special attention to the tips in
+the README here. Some of them may be relevant to your needs or situation. For
+example, there are specific instructions if you want to make a bootable live
+CD.</p>
+
+
+
+<p><strong>Save
+the downloaded files to /tmp</strong>. In the download you’ll
+find a folder named “/DOC/. This is filled with additional readme information
+to help you in case you hit a snag.</p>
+
+
+
+<h2>Generating Your Live OS</h2>
+
+
+
+<p>Now that the script files are where they
+should be, we want to actually run the script. To do this, we’ll have to switch
+from being a regular user to being a Super User. In Ubuntu, <strong>open the terminal</strong> and <strong>type the following:</strong></p>
+
+
+
+<p><strong>cd /tmp</strong></p>
+
+
+
+<p>This switches you to the TMP folder where we
+unpacked the Live Kit files.</p>
+
+
+
+<p>The&nbsp;
+last thing we need to do is run the script, so <strong>type:</strong></p>
+
+
+
+<p><strong>sudo ./build</strong></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="./Make a Custom Live Linux Distro with Linux Live Kit_files/Live-Kit-4.png.webp" alt="" class="wp-image-33286 lazyloaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-300x76.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-610x155.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-80x20.png.webp 80w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4.png.webp" sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-300x76.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-610x155.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-80x20.png.webp 80w" data-was-processed="true"><noscript><img src="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4.png.webp" alt="" class="wp-image-33286" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4.png.webp 680w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-300x76.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-610x155.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2019/05/Live-Kit-4-80x20.png.webp 80w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+
+
+
+<p>Now just wait until the script is done!</p>
+
+
+
+<h2>Running Your Live Distro</h2>
+
+
+
+<p>So how do you get your live distro? The script
+generates two version in the /TMP folder. There’s an ISO image that you can
+burn to a disc or load up in a virtual machine to test. Most people are however
+going to care about the bootable USB files. These are also in the /TMP folder. </p>
+
+
+
+<p>Copy them to your flash drive, remember to
+unzip them in the process. Once they are on there, use the Terminal and
+navigate to the /boot directory. Then run the “bootinst.sh” script to make that
+flash drive bootable. </p>
+
+
+
+<p>If all goes well, you’ll now have your own
+live OS!</p>
+</div>
+				</div>
+
+				<div class="entry-footer">
+
+	<div class="aboveauthorbox">
+		<div id="snhb-In_Content_2-0" class="adsense-block" data-google-query-id="CPf4ocOtvOkCFaHVfAodLhkBAw"><div id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_Content_2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_Content_2_0" title="3rd party ad content" name="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_Content_2_0" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="5" data-load-complete="true" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(11).html"></iframe></div></div>
+<script>googletag.cmd.push(function() { googletag.display('snhb-In_Content_2-0'); });</script>
+<span class="bt-uid-tg" data-uid="5bdc728906-158" style="display: none !important"></span>
+	</div>
+
+	<div class="authorbox">
+		<div class="authoravatar">
+		<img alt="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f7cb0b63500ae78f1a87456d4c3a59f5(1).jpeg" data-lazy-srcset="https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=192&amp;d=blank&amp;r=g 2x" class="avatar avatar-96 photo lazyloaded" height="96" width="96" data-lazy-src="https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=96&amp;d=blank&amp;r=g" srcset="https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=192&amp;d=blank&amp;r=g 2x" data-was-processed="true"><noscript><img alt='' src='https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=96&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/f7cb0b63500ae78f1a87456d4c3a59f5?s=192&#038;d=blank&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' /></noscript>		</div>
+		<div class="authorpostinfo">
+			<div itemprop="description">
+				<p>Founder of Help Desk Geek and managing editor. He began blogging in 2007 and quit his job in 2010 to blog full-time. He has over 15 years of industry experience in IT and holds several technical certifications. <a href="https://helpdeskgeek.com/author/akishorehdg/">Read Aseem's Full Bio</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+			</div>
+
+		
+	
+	<div class="related-posts">
+	<h4 id="related">Read More Posts:</h4>
+	<div class="related-posts-flex">
+								<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/windows-10/the-best-way-to-disable-cortana-in-windows-10/" rel="bookmark">
+						<img width="140" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/Featured-Image-140x85.png.webp" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-70x43.png.webp 70w" data-lazy-sizes="(max-width: 140px) 100vw, 140px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-140x85.png.webp" sizes="(max-width: 140px) 100vw, 140px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-70x43.png.webp 70w" data-was-processed="true"><noscript><img width="140" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-140x85.png.webp" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2019/12/Featured-Image-70x43.png.webp 70w" sizes="(max-width: 140px) 100vw, 140px" /></noscript>					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/windows-10/the-best-way-to-disable-cortana-in-windows-10/" rel="bookmark">The Best Way to Disable Cortana in Windows 10</a>
+					</span>
+				</div>
+							<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/free-tools-review/top-5-usb-utilities-for-pc-repair-and-recovery/" rel="bookmark">
+						<img width="140" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/repair-tools-1-140x85.png.webp" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-70x43.png.webp 70w" data-lazy-sizes="(max-width: 140px) 100vw, 140px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-140x85.png.webp" sizes="(max-width: 140px) 100vw, 140px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-70x43.png.webp 70w" data-was-processed="true"><noscript><img width="140" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-140x85.png.webp" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2019/04/repair-tools-1-70x43.png.webp 70w" sizes="(max-width: 140px) 100vw, 140px" /></noscript>					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/free-tools-review/top-5-usb-utilities-for-pc-repair-and-recovery/" rel="bookmark">Top 5 USB Utilities for PC Repair and Recovery</a>
+					</span>
+				</div>
+							<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/how-to/how-to-set-up-an-automatic-backup-system-for-windows/" rel="bookmark">
+						<img width="140" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/backup-140x85.jpeg" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-140x85.jpeg 140w, https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-70x43.jpeg 70w" data-lazy-sizes="(max-width: 140px) 100vw, 140px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-140x85.jpeg" sizes="(max-width: 140px) 100vw, 140px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-140x85.jpeg 140w, https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-70x43.jpeg 70w" data-was-processed="true"><noscript><img width="140" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-140x85.jpeg" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-140x85.jpeg 140w, https://helpdeskgeek.com/wp-content/pictures/2019/10/backup-70x43.jpeg 70w" sizes="(max-width: 140px) 100vw, 140px" /></noscript>					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/how-to/how-to-set-up-an-automatic-backup-system-for-windows/" rel="bookmark">How To Set Up An Automatic Backup System For Windows</a>
+					</span>
+				</div>
+							<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/how-to/recover-bioscmos-password-using-cmospwd/" rel="bookmark">
+						<img width="140" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/recovercmospassword-thumb-150x150-140x85.png.webp" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-70x43.png.webp 70w" data-lazy-sizes="(max-width: 140px) 100vw, 140px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-140x85.png.webp" sizes="(max-width: 140px) 100vw, 140px" srcset="https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-70x43.png.webp 70w" data-was-processed="true"><noscript><img width="140" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-140x85.png.webp" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-140x85.png.webp 140w, https://helpdeskgeek.com/wp-content/pictures/2011/11/recovercmospassword-thumb-150x150-70x43.png.webp 70w" sizes="(max-width: 140px) 100vw, 140px" /></noscript>					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/how-to/recover-bioscmos-password-using-cmospwd/" rel="bookmark">Recover BIOS/CMOS Password using CMOSPwd</a>
+					</span>
+				</div>
+					</div>
+</div>
+
+	
+<div id="disqus_thread"><iframe id="dsq-app402" name="dsq-app402" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(12).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 394px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+
+	<div class="akic_after_comments">
+	<div class="hdg-in-content-bottom" style="text-align:center;">
+	<!--<pre>In_Content_3 all:[300x250]/dfp:[640x360]</pre>-->
+	<div id="snhb-In_Content_3-0" class="adsense-block" data-google-query-id="CPj4ocOtvOkCFaHVfAodLhkBAw"><div id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_Content_3_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_Content_3_0" title="3rd party ad content" name="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//In_Content_3_0" width="405" height="338" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="6" data-load-complete="true" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(13).html"></iframe></div></div>
+	<script>googletag.cmd.push(function() { googletag.display('snhb-In_Content_3-0'); });</script>
+	<span class="bt-uid-tg" data-uid="5bdc729a03-158" style="display: none !important"></span>
+</div>
+	</div>
+</main> <!-- End content -->
+
+<aside class="sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	<div class="widget social-signup" id="social-signup-2"><h4 class="widgettitle">Daily Email Newsletter</h4>		<!-- Begin Mailchimp Signup Form -->
+		<div id="mc_embed_signup" class="sidebar-signup-form">
+			<form action="https://online-tech-tips.us7.list-manage.com/subscribe/post?u=cea4775e8e99a3e05dd31829e&amp;id=9806833103" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+			    <div id="mc_embed_signup_scroll">
+			    	<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required email sideform-email" id="mce-EMAIL" placeholder="Enter your email and hit enter">
+						<input class="sideform-submit" type="submit" value="►" name="subscribe" id="mc-embedded-subscribe">
+					</div>
+
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cea4775e8e99a3e05dd31829e_15faf51d16" tabindex="-1" value=""></div>
+			    </div>
+			</form>
+		</div>
+		<!--End mc_embed_signup-->
+		<div class="social-links"><span class="social-icon"><a rel="nofollow" class="icon-envelope" href="mailto:akishore@helpdeskgeek.com"></a></span><span class="social-icon"><a rel="nofollow" class="icon-linkedin" href="https://www.linkedin.com/company/helpdeskgeek"></a></span><span class="social-icon"><a rel="nofollow" class="icon-facebook" href="https://www.facebook.com/helpdeskgeek"></a></span><span class="social-icon"><a rel="nofollow" class="icon-twitter" href="https://twitter.com/helpdeskgeek"></a></span><span class="social-icon"><a rel="nofollow" class="icon-rss" href="https://helpdeskgeek.com/feed/"></a></span></div></div><div class="widget widget_text" id="text-10">			<div class="textwidget"><div style="text-align:center;">
+<!--<pre>sidebar_1 all:[300x250][300x600]</pre>-->            
+<div id="snhb-sidebar_1-0" class="adsense-block" data-google-query-id="CPP4ocOtvOkCFaHVfAodLhkBAw"><div id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_1_0" title="3rd party ad content" name="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_1_0" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(14).html"></iframe></div></div>
+<script> googletag.cmd.push(function() { googletag.display('snhb-sidebar_1-0'); }); </script>
+</div>
+<span class="bt-uid-tg" data-uid="5bdc724f8b-158" style="display: none !important"></span> </div>
+		</div><div class="widget featured-posts widget-post-list" id="featured-posts-2"><h4 class="widgettitle">Featured Posts</h4><ul><li><a class="item-image" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-a-blockchain-database/" rel="bookmark" title="HDG Explains : What Is a Blockchain Database?"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/blockchain-1-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/02/blockchain-1-130x85.png.webp" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/02/blockchain-1-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-a-blockchain-database/" rel="bookmark" title="HDG Explains : What Is a Blockchain Database?">HDG Explains : What Is a Blockchain Database?</a></li><li><a class="item-image" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-thunderbolt/" rel="bookmark" title="HDG Explains : What is Thunderbolt?"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/intel-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-300x199.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-610x405.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-75x50.png.webp 75w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-384x254.png.webp 384w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel.png.webp 680w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-130x85.png.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-300x199.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-610x405.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-75x50.png.webp 75w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-384x254.png.webp 384w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel.png.webp 680w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-300x199.png.webp 300w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-610x405.png.webp 610w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-75x50.png.webp 75w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel-384x254.png.webp 384w, https://helpdeskgeek.com/wp-content/pictures/2020/02/intel.png.webp 680w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-thunderbolt/" rel="bookmark" title="HDG Explains : What is Thunderbolt?">HDG Explains : What is Thunderbolt?</a></li><li><a class="item-image" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-an-api/" rel="bookmark" title="HDG Explains: What Is An API?"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/api-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-384x254.jpeg 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-130x85.jpeg" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-384x254.jpeg 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2020/01/api-1-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-an-api/" rel="bookmark" title="HDG Explains: What Is An API?">HDG Explains: What Is An API?</a></li><li><a class="item-image" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-the-bios/" rel="bookmark" title="HDG Explains: What is the BIOS?"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/award-bios-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-384x254.png.webp 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-130x85.png.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-384x254.png.webp 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/01/award-bios-384x254.png.webp 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-the-bios/" rel="bookmark" title="HDG Explains: What is the BIOS?">HDG Explains: What is the BIOS?</a></li></ul></div><div class="widget widget_text" id="text-11">			<div class="textwidget"><div style="text-align:center;">
+<!--<pre>sidebar_2 all:[300x250]</pre>-->            
+<div id="snhb-sidebar_2-0" class="adsense-block" data-google-query-id="CPT4ocOtvOkCFaHVfAodLhkBAw"><div id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_2_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/container.html" id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_2_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+<script>googletag.cmd.push(function() { googletag.display('snhb-sidebar_2-0'); });
+</script>
+</div>
+<span class="bt-uid-tg" data-uid="5bdc7262a7-158" style="display: none !important"></span></div>
+		</div><div class="widget recent-posts widget-post-list" id="recent-posts-3"><h4 class="widgettitle">Recent Posts</h4><ul><li><a class="item-image" href="https://helpdeskgeek.com/networking/hdg-explains-what-is-a-dedicated-ip-address-should-i-get-one/" rel="bookmark" title="HDG Explains : What Is a Dedicated IP Address &amp; Should I Get One?"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/ip-address-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-384x254.jpeg 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-130x85.jpeg" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-384x254.jpeg 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/ip-address-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/networking/hdg-explains-what-is-a-dedicated-ip-address-should-i-get-one/" rel="bookmark" title="HDG Explains : What Is a Dedicated IP Address &amp; Should I Get One?">HDG Explains : What Is a Dedicated IP Address &amp; Should I Get One?</a></li><li><a class="item-image" href="https://helpdeskgeek.com/free-tools-review/5-best-safe-apk-download-sites-for-android-apps/" rel="bookmark" title="5 Best Safe APK Download Sites for Android Apps"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/5-Best-Safe-APK-Download-Sites-for-Android-Apps-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-384x254.png.webp 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-130x85.png.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-384x254.png.webp 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/5-Best-Safe-APK-Download-Sites-for-Android-Apps-384x254.png.webp 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/free-tools-review/5-best-safe-apk-download-sites-for-android-apps/" rel="bookmark" title="5 Best Safe APK Download Sites for Android Apps">5 Best Safe APK Download Sites for Android Apps</a></li><li><a class="item-image" href="https://helpdeskgeek.com/windows-10/install-and-setup-a-website-in-iis-on-windows-10/" rel="bookmark" title="Install and Setup a Website in IIS on Windows 10"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/IIS-Featured-Image-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-384x254.png.webp 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-130x85.png.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-384x254.png.webp 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-130x85.png.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/IIS-Featured-Image-384x254.png.webp 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/windows-10/install-and-setup-a-website-in-iis-on-windows-10/" rel="bookmark" title="Install and Setup a Website in IIS on Windows 10">Install and Setup a Website in IIS on Windows 10</a></li><li><a class="item-image" href="https://helpdeskgeek.com/product-reviews/the-4-best-wearable-translators/" rel="bookmark" title="The 4 Best Wearable Translators"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/translator-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-384x254.jpeg 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-130x85.jpeg" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-384x254.jpeg 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2020/05/translator-1-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/product-reviews/the-4-best-wearable-translators/" rel="bookmark" title="The 4 Best Wearable Translators">The 4 Best Wearable Translators</a></li></ul></div><div class="widget posts-random widget-post-list" id="posts-random-2"><h4 class="widgettitle">Random Posts</h4><ul><li><a class="item-image" href="https://helpdeskgeek.com/help-desk/fix-cant-adjust-brightness-windows-10/" rel="bookmark" title="Fix Can’t Adjust Brightness after Upgrading to Windows 8.1/10"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/win-8.1-brightness1-130x85.jpg.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-384x254.jpg.webp 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-130x85.jpg.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-384x254.jpg.webp 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-130x85.jpg.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2014/01/win-8.1-brightness1-384x254.jpg.webp 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/help-desk/fix-cant-adjust-brightness-windows-10/" rel="bookmark" title="Fix Can’t Adjust Brightness after Upgrading to Windows 8.1/10">Fix Can’t Adjust Brightness after Upgrading to Windows 8.1/10</a></li><li><a class="item-image" href="https://helpdeskgeek.com/how-to/how-to-view-the-source-code-of-an-open-source-piece-of-software/" rel="bookmark" title="How To View The Source Code Of An Open-Source Piece Of Software"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/source-code-130x85.jpg.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-384x254.jpg.webp 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-130x85.jpg.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-384x254.jpg.webp 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-130x85.jpg.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2019/12/source-code-384x254.jpg.webp 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/how-to/how-to-view-the-source-code-of-an-open-source-piece-of-software/" rel="bookmark" title="How To View The Source Code Of An Open-Source Piece Of Software">How To View The Source Code Of An Open-Source Piece Of Software</a></li><li><a class="item-image" href="https://helpdeskgeek.com/how-to/see-how-much-your-cpu-bottlenecks-your-gpu-before-you-buy-it/" rel="bookmark" title="See How Much Your CPU Bottlenecks Your GPU BEFORE You Buy It"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/cropped-GPU-Check-Title-Image-130x85.jpg.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-384x254.jpg.webp 384w" data-lazy-sizes="(max-width: 130px) 100vw, 130px" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-130x85.jpg.webp" sizes="(max-width: 130px) 100vw, 130px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-384x254.jpg.webp 384w" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-130x85.jpg.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-130x85.jpg.webp 130w, https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-GPU-Check-Title-Image-384x254.jpg.webp 384w" sizes="(max-width: 130px) 100vw, 130px" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/how-to/see-how-much-your-cpu-bottlenecks-your-gpu-before-you-buy-it/" rel="bookmark" title="See How Much Your CPU Bottlenecks Your GPU BEFORE You Buy It">See How Much Your CPU Bottlenecks Your GPU BEFORE You Buy It</a></li><li><a class="item-image" href="https://helpdeskgeek.com/linux-tips/display-a-list-of-recently-installed-software-packages-in-ubuntu/" rel="bookmark" title="Display a List of Recently Installed Software Packages in Ubuntu"><img width="130" height="85" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/01_opening_synaptic_package_manager_thumb3-150x150-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image lazyloaded" alt="" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2011/11/01_opening_synaptic_package_manager_thumb3-150x150-130x85.png.webp" data-was-processed="true"><noscript><img width="130" height="85" src="https://helpdeskgeek.com/wp-content/pictures/2011/11/01_opening_synaptic_package_manager_thumb3-150x150-130x85.png.webp" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" /></noscript></a><a class="item-title" href="https://helpdeskgeek.com/linux-tips/display-a-list-of-recently-installed-software-packages-in-ubuntu/" rel="bookmark" title="Display a List of Recently Installed Software Packages in Ubuntu">Display a List of Recently Installed Software Packages in Ubuntu</a></li></ul></div><div class="widget widget_text" id="text-13">			<div class="textwidget"><div style="text-align: center;">
+<p><!--
+
+
+<pre>sidebar_3 desktop:[300x250][300x600]/dfp:[336x291]</pre>
+
+
+--></p>
+<div id="snhb-sidebar_3-0" class="adsense-block" data-google-query-id="CPX4ocOtvOkCFaHVfAodLhkBAw"><div id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_3_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"><iframe frameborder="0" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/container(1).html" id="google_ads_iframe_/22152718/sws-hb//helpdeskgeek.com//sidebar_3_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="3" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+<p><script>googletag.cmd.push(function() { googletag.display('snhb-sidebar_3-0'); });
+</script></p>
+</div>
+<p>&nbsp;</p>
+</div>
+		</div></aside>
+
+	</div> <!-- Ending content-wrap -->
+</div><iframe name="__cmpLocator" style="display: none;" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(15).html"></iframe><iframe name="__uspapiLocator" style="display: none;" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(16).html"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins></ins> <!-- close site-container -->
+
+	<footer id="footer" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+		<div class="footer-widget-row">
+			<div class="wrap">
+				<div class="footer-widget-block footer-widget-left">
+					<div class="widget_text widget widget_custom_html" id="custom_html-3"><h4 class="widgettitle">Our Publishing Family</h4><div class="textwidget custom-html-widget"><div style="color:white">
+	Help Desk Geek is part of the AK Internet Consulting publishing family. 
+</div>
+<div>
+	<ul style="padding-top:10px;color:white">
+<li style="padding-bottom:3px">
+<a href="https://www.online-tech-tips.com/" target="_blank" rel="nofollow noopener noreferrer" style="color:white">ONLINE TECH TIPS</a>
+</li>
+<li style="padding-bottom:3px">
+<a href="https://thebackroomtech.com/" target="_blank" rel="nofollow noopener noreferrer" style="color:white">THE BACK ROOM TECH</a>
+</li>
+<li>
+<a href="https://www.switchingtomac.com/" target="_blank" rel="nofollow noopener noreferrer" style="color:white">SWITCHING TO MAC</a>
+</li>
+	</ul>
+</div></div></div>				</div>
+
+				<div class="footer-widget-block footer-widget-center">
+					<div class="widget social-signup" id="social-signup-3"><h4 class="widgettitle">Daily Email Newsletter</h4>		<!-- Begin Mailchimp Signup Form -->
+		<div id="mc_embed_signup" class="sidebar-signup-form">
+			<form action="https://online-tech-tips.us7.list-manage.com/subscribe/post?u=cea4775e8e99a3e05dd31829e&amp;id=9806833103" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+			    <div id="mc_embed_signup_scroll">
+			    	<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required email sideform-email" id="mce-EMAIL" placeholder="Enter your email and hit enter">
+						<input class="sideform-submit" type="submit" value="►" name="subscribe" id="mc-embedded-subscribe">
+					</div>
+
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cea4775e8e99a3e05dd31829e_15faf51d16" tabindex="-1" value=""></div>
+			    </div>
+			</form>
+		</div>
+		<!--End mc_embed_signup-->
+		<h4 class="widgettitle">CONNECT WITH US</h4><div class="social-links"><span class="social-icon"><a rel="nofollow" class="icon-envelope" href="mailto:akishore@helpdeskgeek.com"></a></span><span class="social-icon"><a rel="nofollow" class="icon-linkedin" href="https://www.linkedin.com/company/helpdeskgeek"></a></span><span class="social-icon"><a rel="nofollow" class="icon-facebook" href="https://www.facebook.com/helpdeskgeek"></a></span><span class="social-icon"><a rel="nofollow" class="icon-twitter" href="https://twitter.com/helpdeskgeek"></a></span><span class="social-icon"><a rel="nofollow" class="icon-rss" href="https://helpdeskgeek.com/feed/"></a></span></div></div>				</div>
+
+				<div class="footer-widget-block footer-widget-right">
+					<div class="widget about-block" id="about-block-2"><h4 class="widgettitle">About Help Desk Geek</h4><p>Welcome to Help Desk Geek- a blog full of help desk tips for IT Professionals and geeks. My name is Aseem Kishore and I am a full-time professional blogger. I graduated from Emory University with a degree in Computer Science and Mathematics.</p>
+<a class="read-more" rel="author" href="https://helpdeskgeek.com/about">Read More</a></div>				</div>
+			</div>
+		</div>
+
+		<div class="footer-info-row">
+			<div class="wrap">
+				<p><a href="https://helpdeskgeek.com/">Home</a>
+<a href="https://helpdeskgeek.com/about/">About</a>
+<a href="https://helpdeskgeek.com/contact/">Contact</a>
+<a href="https://helpdeskgeek.com/privacy-policy/">Privacy Policy</a>
+</p>
+				<p class="copyright">Copyright © 2008-2020 Help Desk Geek.com, LLC All Rights Reserved</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<script>
+jQuery('#iabconsent').on('click',function(e){
+	e.preventDefault();
+	window.__cmp('showGUI', null, function(result){
+		snhb.console.debug("Opening Consent Management Platform...");
+	});
+});
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"helpdeskgeek"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/comment_count.js.下載"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.17"},"disqusIdentifier":"33281 https:\/\/helpdeskgeek.com\/?p=33281","disqusShortname":"helpdeskgeek","disqusTitle":"Make a Custom Live Linux Distro with Linux Live Kit","disqusUrl":"https:\/\/helpdeskgeek.com\/linux-tips\/make-a-custom-live-linux-distro-with-linux-live-kit\/","postId":"33281"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/comment_embed.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/comment-reply.min.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/picturefill.min.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/akicGlobal.min.js.下載"></script>
+<script type="text/javascript" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/wp-embed.min.js.下載"></script>
+<script type="text/javascript" async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/f(10).txt"></script>
+<script>window.lazyLoadOptions = {
+                elements_selector: "img[data-lazy-src],.rocket-lazyload",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                data_sizes: "lazy-sizes",
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_loaded: function(element) {
+                    if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+                        if (element.classList.contains("lazyloaded") ) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }};
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            var lazyLoadInstance = e.detail.instance;
+
+            if (window.MutationObserver) {
+                var observer = new MutationObserver(function(mutations) {
+                    var image_count = 0;
+                    var iframe_count = 0;
+                    var rocketlazy_count = 0;
+
+                    mutations.forEach(function(mutation) {
+                        for (i = 0; i < mutation.addedNodes.length; i++) {
+                            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+                                return;
+                            }
+
+                           if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+                                return;
+                            }
+
+                            images = mutation.addedNodes[i].getElementsByTagName('img');
+                            is_image = mutation.addedNodes[i].tagName == "IMG";
+                            iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+                            is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+                            rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+
+                            image_count += images.length;
+			                iframe_count += iframes.length;
+			                rocketlazy_count += rocket_lazy.length;
+
+                            if(is_image){
+                                image_count += 1;
+                            }
+
+                            if(is_iframe){
+                                iframe_count += 1;
+                            }
+                        }
+                    } );
+
+                    if(image_count > 0 || iframe_count > 0 || rocketlazy_count > 0){
+                        lazyLoadInstance.update();
+                    }
+                } );
+
+                var b      = document.getElementsByTagName("body")[0];
+                var config = { childList: true, subtree: true };
+
+                observer.observe(b, config);
+            }
+        }, false);</script><script data-no-minify="1" async="" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/lazyload.min.js.下載"></script>
+
+
+<!-- google_ad_section_end -->
+<script src="./Make a Custom Live Linux Distro with Linux Live Kit_files/code" async=""></script><iframe style="display: none;" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(17).html"></iframe><iframe id="google_osd_static_frame_6799534761187" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(18).html"></iframe></body><iframe id="google_esf" name="google_esf" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/zrt_lookup.html" data-ad-client="ca-pub-8156617711959851" style="display: none;"></iframe><iframe sandbox="allow-scripts allow-same-origin" id="738beb337e2c9ef" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(19).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="74990e97bad4dbc" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(20).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="75e37f79e335a8e" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(21).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="76b9e753872d01b" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(22).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="777b5538439a7e8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/async_usersync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="78a65772c9caf09" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(23).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="793db7c5c16bc3c" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/ixmatch.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="809e91260ae3b9f" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/saved_resource(24).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="819de4f47d848c" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/async_usersync(1).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="8290f82d271bfd9" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/pd.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="8359549ea89082b" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Make a Custom Live Linux Distro with Linux Live Kit_files/sync.html">
+    </iframe></html>

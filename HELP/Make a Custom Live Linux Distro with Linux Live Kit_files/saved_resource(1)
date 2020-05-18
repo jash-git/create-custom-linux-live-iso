@@ -1,0 +1,21 @@
+
+var ftGUID_4215958="4087311C3F65BB";
+var ftConfID_4215958="0";
+var ftParams_4215958="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=helpdeskgeek.com&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fhelpdeskgeek.com%2Flinux-tips%2Fmake-a-custom-live-linux-distro-with-linux-live-kit%2F&cachebuster=363930.60794963606";
+var ftKeyword_4215958="";
+var ftCustom_4215958="";
+var ftSection_4215958="";
+var ftSegment_4215958="";
+var ftSegmentList_4215958=[];
+var ftRuleMatch_4215958="0";
+var ftTimestamp_4215958="1589768614";
+var ftImp4215958 = {};
+ftImp4215958.privacy = "x";
+ftImp4215958.guidAge = "434";
+ftImp4215958.impID = "25013303-B31F-94FE-6165-DFA6BA1D0583";
+ftImp4215958.duid = "FT:4087311C3F65BB";
+
+ftImp4215958.ft_tpplid = "";
+ftImp4215958.ft_c = {};
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/421/4215958/2776257/js/j-4215958-2776257.js" id="ftscript_m4215958" name="ftscript_m4215958"></scr'+'ipt>');
